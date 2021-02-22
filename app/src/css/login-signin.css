@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  --white: white;
+  --gray: rgba(65, 65, 65, 0.596);
+  --red: rgba(253, 0, 0, 0.815);
+  --light-gray: rgb(155, 155, 155);
+}
+
+a,
+label {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.login > p,
+.register > p {
+  text-align: center;
+  margin: 2rem;
+  font-size: 40px;
+  color: var(--red);
+  font-weight: bold;
+}
+
+/*login, resgister, change password*/
+.wrapper {
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(6px);
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-content: center;
+  z-index: 100;
+}
+
+.login,
+.register {
+  margin: 8rem auto;
+  padding: 2rem;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid var(--white);
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  border-radius: 5px;
+  background: black;
+}
+
+.login > div:first-of-type,
+.register > div:first-of-type {
+  padding: 1rem;
+  font-size: 250%;
+  font-weight: 900;
+}
+
+.login > form input,
+.register > form input {
+  margin: 0.3rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+}
+
+.login a {
+  text-decoration: underline;
+  margin: 10px 0px 40px;
+}
+
+.login > form > input,
+.register > form > input {
+  background: red;
+  border: none;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.login > button,
+.register > button {
+  margin-left: 400px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .login,
+  .register {
+    width: 300px;
+  }
+  .login > button,
+  .register > button {
+    margin-left: 200px;
+  }
+}

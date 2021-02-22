@@ -1,0 +1,31 @@
+.linkPrincipal > nav > a {
+  color: white;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.linkPrincipal > nav > a:hover,
+.linkPrincipal > nav > button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.linkPrincipal {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+}
+
+.principal {
+  position: relative;
+}
+
+.linkPrincipal > nav > button {
+  border: none;
+  color: white;
+  background: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 30px;
+}

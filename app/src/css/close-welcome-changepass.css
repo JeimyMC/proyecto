@@ -1,0 +1,82 @@
+html {
+  --white: white;
+  --gray: rgba(65, 65, 65, 0.596);
+  --red: rgba(253, 0, 0, 0.815);
+  --light-gray: rgb(155, 155, 155);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fondo {
+  height: 100%;
+  width: 100%;
+  background: repeat-x center/50% url("../img/fondo-cerrar-sesion.jpg");
+}
+
+.welcome {
+  font-size: 30px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.781);
+  box-shadow: 2px 5px 8px rgb(49, 49, 49);
+  border-radius: 5px;
+  padding: 100px;
+}
+
+.changePassword {
+  margin: 60px 500px;
+  max-width: 400px;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.664);
+  padding: 60px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  position: relative;
+}
+
+.changePassword > form input {
+  margin-top: 10px;
+  padding: 0.4rem;
+}
+
+.changePassword > form > input {
+  background: red;
+  border: none;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.changePassword > p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.changePassword > a {
+  border: 1px solid white;
+  padding: 1px 5px;
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  right: 15px;
+}
+
+@media (max-width: 1200px) {
+  .changePassword {
+    margin: 50px 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .changePassword {
+    margin: 10px 30px;
+  }
+}

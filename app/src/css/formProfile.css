@@ -1,0 +1,81 @@
+html {
+  --white: white;
+  --gray: rgba(65, 65, 65, 0.596);
+  --red: rgba(253, 0, 0, 0.815);
+  --light-gray: rgb(155, 155, 155);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.formProfile {
+  max-width: 300px;
+  min-width: 300px;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.664);
+  position: relative;
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  margin: 40px 0px;
+  margin-left: 500px;
+}
+
+.formProfile > form > div {
+  margin-top: 10px;
+}
+
+.formProfile input {
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.formProfile > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.formProfile > button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.formProfile > form > input {
+  margin-top: 20px;
+  background: var(--red);
+  border: none;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .formProfile {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .formProfile {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .formProfile {
+    margin: 10px;
+  }
+}

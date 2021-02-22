@@ -1,0 +1,89 @@
+html {
+  --white: white;
+  --gray: rgba(65, 65, 65, 0.596);
+  --red: rgba(253, 0, 0, 0.815);
+  --light-gray: rgb(155, 155, 155);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.btnViewBook {
+  background: none;
+  color: white;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.btnViewBook:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.err {
+  background: black;
+  border: 1px solid white;
+  width: 500px;
+  height: 150px;
+  text-align: center;
+  margin-top: 300px;
+  margin-left: 600px;
+  border-radius: 8px;
+}
+
+#btnErr {
+  margin-left: 400px;
+  margin-top: 10px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  width: 30px;
+}
+
+.err > p {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+  .err {
+    margin-top: 300px;
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .err {
+    margin-top: 300px;
+    margin-left: 100px;
+    width: 60vw;
+  }
+  #btnErr {
+    margin-left: 200px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .err {
+    margin-top: 300px;
+    margin-left: 100px;
+    width: 60vw;
+  }
+  #btnErr {
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+  .err > p {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
