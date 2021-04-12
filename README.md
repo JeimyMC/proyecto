@@ -7,10 +7,9 @@ Una aplicación para la venta de libros se segunda mano.
 ### Construido con
 
 - [React](https://es.reactjs.org/)
-- [Node] (https://nodejs.org/es/)
+- [Node](https://nodejs.org/es/)
+- [Express](https://expressjs.com/es/)
 - [MySQL](https://www.mysql.com/)
-
-* [Express](https://expressjs.com/es/)
 
 # Instalación
 
@@ -32,6 +31,8 @@ npm install
 ```
 npm run dev
 ```
+
+# Funcionalidad
 
 Puedes buscar los libros publicados por:
 
