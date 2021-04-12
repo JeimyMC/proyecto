@@ -1,6 +1,37 @@
 # RecyBook
 
-## ¡Bienvenido a Recybook, una aplicación para la venta de libros se segunda mano!
+## ¡Bienvenido a Recybook!
+
+Una aplicación para la venta de libros se segunda mano.
+
+### Construido con
+
+- [React](https://es.reactjs.org/)
+- [Node] (https://nodejs.org/es/)
+- [MySQL](https://www.mysql.com/)
+
+* [Express](https://expressjs.com/es/)
+
+# Instalación
+
+1. Clonar el repositorio
+
+```
+git clone https://github.com/JeimyMC/proyecto.git
+```
+
+2. Instalar npm
+
+```
+npm install
+```
+
+3. Completar la información del .env_template
+4. Lanzar el servidor
+
+```
+npm run dev
+```
 
 Puedes buscar los libros publicados por:
 
