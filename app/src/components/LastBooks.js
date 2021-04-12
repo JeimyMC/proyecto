@@ -1,8 +1,7 @@
 import React from "react";
-import { useFetchData } from "./useFetch/useFetchData";
-import { port } from "./Principal";
+import { useFetchData } from "../hooks/useFetchData";
+import { port } from "../App";
 import { List } from "./List-Avatar";
-import "../css/lastbooks.css";
 
 const LastBooks = () => {
   const [data] = useFetchData(`http://localhost:${port}/beginning/lastBooks`);

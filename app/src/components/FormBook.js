@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { port } from "./Principal";
-import { useFetchData } from "./useFetch/useFetchData";
-import "../css/formBook.css";
+import { port } from "../App";
+import { useFetchData } from "../hooks/useFetchData";
 
 const FormEditBook = ({ auth }) => {
   const { idBook } = useParams();

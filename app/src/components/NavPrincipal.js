@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Login } from "./Login";
 import { SignIn } from "./Signin";
 import { Close } from "./Close-Welcome-ChangePass";
-import "../css/navPrincipal.css";
 
 const NavPrincipal = ({ auth, setAuth }) => {
   const [login, setLogin] = useState(false);

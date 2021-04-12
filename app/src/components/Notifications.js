@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { port } from "./Principal";
-import { useFetchAuth } from "./useFetch/useFetchAuth";
+import { port } from "../App";
+import { useFetchAuth } from "../hooks/useFetchAuth";
 import { ButtonDelete } from "./Buttons";
 
 const Notifications = ({ auth }) => {

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { port } from "./Principal";
+import { port } from "../App";
 import { useHistory } from "react-router-dom";
-import { useFetchAuth } from "./useFetch/useFetchAuth";
-import "../css/formProfile.css";
+import { useFetchAuth } from "../hooks/useFetchAuth";
 
 const CreateProfile = ({ auth }) => {
   const [dataUser] = useFetchAuth(

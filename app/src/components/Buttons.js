@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { port } from "./Principal";
-import "../css/buttons.css";
+import { port } from "../App";
 
 const ButtonPurchaseFavoriteReserved = ({ idBook, to, name, rout, auth }) => {
   const history = useHistory();

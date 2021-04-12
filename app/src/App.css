@@ -1,38 +1,1227 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --white: white;
+  --gray: rgba(128, 128, 128, 0.555);
+  --red: rgba(253, 0, 0, 0.815);
+  --light-gray: rgb(155, 155, 155);
+  --black: black;
+}
+
+body {
+  background-color: black;
+}
+
+h1,
+h2,
+p {
+  color: var(--red);
+}
+
+h2 {
+  margin: 50px 200px;
+}
+#categories > nav > ul {
+  margin: 50px 250px 0px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "española idiomas extranjera academicos"
+    "infantil juvenil comic hobbies";
+  grid-gap: 20px;
+}
+
+li[id="1"] {
+  grid-area: española;
+}
+
+li[id="2"] {
+  grid-area: idiomas;
+}
+
+li[id="3"] {
+  grid-area: extranjera;
+}
+li[id="4"] {
+  grid-area: academicos;
+}
+li[id="5"] {
+  grid-area: infantil;
+}
+li[id="6"] {
+  grid-area: juvenil;
+}
+li[id="7"] {
+  grid-area: comic;
+}
+li[id="8"] {
+  grid-area: hobbies;
+}
+
+#categories > nav > ul > li {
+  list-style: none;
+  padding: 20px;
+  width: 250px;
+  height: 65px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--gray);
+  text-transform: capitalize;
+  box-shadow: 2px 3px 6px rgb(95, 95, 95);
+}
+
+#categories > nav > ul > li:hover {
+  background: var(--red);
+  box-shadow: 2px 3px 6px rgb(46, 46, 46);
+  cursor: pointer;
+}
+
+.viewBook > nav {
+  margin-bottom: 30px;
+}
+
+.viewBook {
+  margin: 100px 200px;
+  position: relative;
+}
+
+.viewBook > div {
+  display: flex;
+}
+
+.viewBook > div > main {
+  margin: 30px 100px;
+}
+
+.viewBook > nav > p {
+  font-size: 20px;
+}
+
+.viewBook > div > main > div > p {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.viewBook img {
+  cursor: pointer;
+}
+
+.viewBook > div > main > div > p:nth-child(1) {
+  font-size: 40px;
+}
+
+.viewBook > div > main > div > p:nth-child(2) {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.viewBook > div > main > nav {
+  margin-top: 60px;
+}
+
+.viewBook a:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.btnPurchase {
+  display: flex;
+}
+
+.btnViewBook {
+  background: none;
+  color: white;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.btnViewBook:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.err {
+  background: black;
+  border: 1px solid white;
+  width: 500px;
+  height: 150px;
+  text-align: center;
+  margin-top: 300px;
+  margin-left: 600px;
+  border-radius: 8px;
+}
+
+#btnErr {
+  margin-left: 400px;
+  margin-top: 10px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  width: 30px;
+}
+
+.err > p {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.fondo {
+  height: 100%;
+  width: 100%;
+  background: repeat-x center/50% url("./img/fondo-cerrar-sesion.jpg");
+}
+
+.welcome {
+  font-size: 30px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.781);
+  box-shadow: 2px 5px 8px rgb(49, 49, 49);
+  border-radius: 5px;
+  padding: 100px;
+}
+
+.changePassword {
+  margin: 60px 500px;
+  max-width: 400px;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.664);
+  padding: 60px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  position: relative;
+}
+
+.changePassword > form input {
+  margin-top: 10px;
+  padding: 0.4rem;
+}
+
+.changePassword > form > input {
+  background: red;
+  border: none;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.changePassword > p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.changePassword > a {
+  border: 1px solid white;
+  padding: 1px 5px;
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  right: 15px;
+}
+
+.formBook {
+  border: 1px solid white;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.664);
+  margin: 0px 400px;
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  border-radius: 8px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.formBook > form {
+  margin: auto;
+  height: 350px;
+}
+
+.formBook > form > div {
+  margin-top: 10px;
+}
+
+.formBook > form > div:first-child,
+.formBook > form > div:nth-child(2) {
+  margin-left: 170px;
+}
+
+.formBook input {
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.formBook > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.formBook > button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.formBook > form > input {
+  background: var(--red);
+  border: none;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+.forms {
+  padding: 190px;
+  background: no-repeat center/100% url("./img/fondo-forms.jpg");
+}
+
+.formProfile {
+  max-width: 300px;
+  min-width: 300px;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.664);
+  position: relative;
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  margin: 40px 0px;
+  margin-left: 500px;
+}
+
+.formProfile > form > div {
+  margin-top: 10px;
+}
+
+.formProfile input {
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.formProfile > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.formProfile > button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.formProfile > form > input {
+  margin-top: 20px;
+  background: var(--red);
+  border: none;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+.classification {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  margin-right: 800px;
+  margin-bottom: 10px;
+}
+
+.classification > label {
+  color: grey;
+}
+
+.classification > input {
+  display: none;
+}
+
+.classification label:hover,
+.classification label:hover ~ label {
+  color: orange;
+  cursor: pointer;
+}
+
+.classification input[type="checkbox"]:checked ~ label {
+  color: orange;
+}
+
+.valoration {
+  margin-top: 30px;
+}
+
+.headerPrincipal {
+  height: 350px;
+  background: no-repeat center/100% url("./img/f-p-13.png");
+}
+
+.headerPrincipal > h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+.seeker {
+  margin: 0 300px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.select {
+  background-color: var(--red);
+  border: none;
+  padding: 5px 15px;
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 15px 0px 0px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.textSeek > :first-child {
+  width: 400px;
+  height: 28px;
+  border: none;
+  padding-left: 10px;
+}
+
+.textSeek > :last-child {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+  font-size: 16px;
+}
+
+#lastBooks > ul {
+  margin: 0px 300px 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+#lastBooks > h3 {
+  margin: 50px 200px;
+  color: var(--red);
+}
+
+.book {
+  width: 300px;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  box-shadow: 2px 4px 7px rgb(255, 0, 0);
+  margin-bottom: 30px;
+  padding: 40px;
+  background: black;
+  box-sizing: border-box;
+}
+
+.book:hover {
+  transform: scale(2);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.book > main > p {
+  margin-left: 20px;
+}
+
+.book > main {
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+}
+
+.listBooksUser {
+  margin: 100px 200px;
+}
+
+.listBooksUser > section > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+
+.listBooksUser > p {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.listBooksUser > section {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.listBooksUser > section > button {
+  background: none;
+  color: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.listBooksUser > section > button:hover {
+  border: 2px solid var(--red);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.listBooksUser > nav > p {
+  font-size: 20px;
+}
+
+a,
+label {
+  text-decoration: none;
+  cursor: pointer;
   color: white;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.login > p,
+.register > p {
+  text-align: center;
+  margin: 2rem;
+  font-size: 40px;
+  color: var(--red);
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*login, resgister, change password*/
+.wrapper {
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(6px);
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-content: center;
+  z-index: 100;
+}
+
+.login,
+.register {
+  margin: 8rem auto;
+  padding: 2rem;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid var(--white);
+  box-shadow: 2px 5px 8px rgb(95, 95, 95);
+  border-radius: 5px;
+  background: black;
+}
+
+.login > div:first-of-type,
+.register > div:first-of-type {
+  padding: 1rem;
+  font-size: 250%;
+  font-weight: 900;
+}
+
+.login > form input,
+.register > form input {
+  margin: 0.3rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+}
+
+.login a {
+  text-decoration: underline;
+  margin: 10px 0px 40px;
+}
+
+.login > form > input,
+.register > form > input {
+  background: red;
+  border: none;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.login > button,
+.register > button {
+  margin-left: 400px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 15px;
+}
+
+.linkPrincipal > nav > a {
+  color: white;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.linkPrincipal > nav > a:hover,
+.linkPrincipal > nav > button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.linkPrincipal {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+}
+
+.principal {
+  position: relative;
+}
+
+.linkPrincipal > nav > button {
+  border: none;
+  color: white;
+  background: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.profileInside {
+  margin: 0px 200px;
+}
+
+.profileInside > nav {
+  background: linear-gradient(to right, var(--red), var(--black));
+  height: 80px;
+  display: flex;
+}
+
+.profileInside > nav > section > button {
+  font-size: 50px;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.profileInside > nav > ul {
+  padding-top: 28px;
+}
+
+.profileInside > nav > section {
+  padding-top: 20px;
+}
+
+.profileInside > nav > section > ul {
+  background: rgb(0, 0, 0);
+  border-left: 1px solid white;
+  padding: 10px;
+}
+
+.profileInside > nav > section > ul > li {
+  margin: 6px 0px 10px 10px;
+}
+
+.profileInside > nav > section > ul > li:hover,
+.profileInside > nav > section > ul > li > button:hover {
+  background: var(--red);
+}
+
+.profileInside > nav > section > ul > li > button {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.profileInside > nav > section {
+  margin-left: 500px;
+  z-index: 100;
+}
+
+.profileInside > nav > ul {
+  display: flex;
+}
+
+.profileInside li {
+  list-style: none;
+}
+.profileInside > nav > ul > li > a {
+  font-weight: bold;
+  list-style: none;
+  margin: 0px 100px;
+}
+
+.profileInside > header {
+  display: flex;
+  background: no-repeat right/50% url("./img/f-perfil.jpg");
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+}
+
+.profileInside > header > main {
+  margin-top: 60px;
+}
+
+.profileInside > header > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 20px 100px;
+}
+
+.profileInside > main > nav > ul {
+  display: grid;
+  grid-template-areas:
+    "Notif  Notif Fav"
+    "Pur   Res  Fav"
+    "Pur  Sell Sell";
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 40px 100px;
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.profileInside > main > nav > ul > li {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgb(95, 95, 95);
+}
+
+.profileInside > main > nav > ul > li > a {
+  margin: auto;
+  transform-origin: botton left;
+  transition: 1000ms;
+  font-size: 30px;
+}
+
+.profileInside > main > nav > ul > li > a:hover {
+  transform: scale(-3);
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.profileInside > main > nav > ul > li:hover {
+  background: var(--red);
+  cursor: pointer;
+}
+
+#notif {
+  grid-area: Notif;
+}
+
+#fav {
+  grid-area: Fav;
+}
+
+#pur {
+  grid-area: Pur;
+}
+
+#sell {
+  grid-area: Sell;
+}
+
+#res {
+  grid-area: Res;
+}
+
+.profileInside > header > main > p {
+  text-transform: capitalize;
+}
+
+.profileInside > header > main > p:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.profileOut {
+  margin: 10px 250px 0px;
+}
+
+.profileOut > header {
+  display: flex;
+  height: 300px;
+  background: no-repeat right/50% url("./img/f-perfil.jpg");
+  box-shadow: 0 4px 2px -2px rgb(153, 153, 153);
+}
+
+.profileOut > header > div {
+  margin-left: 60px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+.profileOut > header > div > p {
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.profileOut > header > div > p:first-child {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.profileOut > header > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50rem;
+  border: 2px solid #666;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.profileOut > main > ul {
+  display: grid;
+  margin: 50px 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+.profileOut > nav {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.profileOut a:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.viewValoration {
+  margin: 100px 300px;
+}
+
+.viewValoration > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.viewValoration > ul > li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.viewValoration > ul > li > header {
+  margin-right: 60px;
+}
+
+.viewValoration a:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.viewValoration > ul > li > main > p {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.viewValoration > nav > p {
+  font-size: 20px;
+}
+
+.viewValoration > p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--red);
+}
+
+@media (max-width: 1400px) {
+  .profileOut {
+    margin: 10px 100px 0px;
   }
-  to {
-    transform: rotate(360deg);
+  .profileOut > main > ul {
+    display: grid;
+    margin: 50px 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  .profileInside {
+    margin: 0px;
+  }
+
+  .profileInside > nav > a {
+    margin: 0px 80px;
+  }
+  #lastBooks > ul {
+    margin: 0px 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .book {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .price {
+    bottom: -20px;
+    right: 15px;
+  }
+  .formProfile {
+    margin-left: 300px;
+  }
+  #categories > nav > ul {
+    margin: 20px 300px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "española idiomas"
+      "extranjera academicos"
+      "infantil juvenil"
+      "comic hobbies";
+  }
+  #categories > nav > ul > li {
+    width: 300px;
+  }
+  .formBook {
+    margin: 0 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .profileInside {
+    margin: 0px;
+  }
+  .profileInside > header {
+    background: no-repeat right/30% url("./img/f-perfil.jpg");
+  }
+  .profileInside > nav > ul > li > a {
+    margin: 0px 40px;
+  }
+  .profileInside > main > nav > ul {
+    margin: 20px;
+  }
+  .profileInside > nav > section {
+    margin-left: 400px;
+  }
+  .listBooksUser {
+    margin: 20px 200px;
+  }
+  .listBooksUser > section > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+  }
+  .textSeek > :first-child {
+    width: 200px;
+  }
+  .seeker {
+    margin: 0 100px 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .viewValoration {
+    margin: 50px 100px;
+  }
+  .profileOut > header {
+    background: no-repeat right/30% url("./img/f-perfil.jpg");
+  }
+  #lastBooks > ul {
+    margin: 0px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .price {
+    bottom: -20px;
+    right: 15px;
+  }
+  .book {
+    width: 150px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .classification {
+    margin-right: 100px;
+  }
+  .formBook {
+    margin: 0 50px;
+  }
+  .formBook > form > div:first-child,
+  .formBook > form > div:nth-child(2) {
+    margin-left: 100px;
+  }
+  .forms {
+    padding: 80px;
+  }
+  .viewBook > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .viewBook > div > main {
+    margin: 5px 40px;
+  }
+  #categories > nav > ul {
+    margin: 20px 200px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "española idiomas"
+      "extranjera academicos"
+      "infantil juvenil"
+      "comic hobbies";
+  }
+  #categories > nav > ul > li {
+    width: 200px;
+  }
+  h2 {
+    margin: 0px 80px;
+  }
+  .changePassword {
+    margin: 50px 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .profileInside > nav > section {
+    margin-left: 250px;
+  }
+  .formProfile {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .viewValoration {
+    margin: 10px 20px;
+  }
+  .viewValoration > ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .profileOut > header {
+    background: black;
+  }
+  .profileOut > header img {
+    width: 90px;
+    height: 90px;
+    margin-top: 100px;
+    margin-left: 40px;
+  }
+  .profileOut {
+    margin: 20px;
+  }
+  .profileOut > main > ul {
+    margin: 0px;
+  }
+  .profileInside {
+    margin: 0px;
+  }
+  .profileInside > header {
+    background: black;
+  }
+  .profileInside > nav {
+    padding: 25px;
+  }
+  .profileInside > nav > ul > li > a {
+    margin: 0px 10px;
+  }
+  .profileInside > main > nav > ul {
+    margin: 20px;
+  }
+  .profileInside > header > img {
+    width: 90px;
+    height: 90px;
+    margin-top: 60px;
+    margin-right: 20px;
+  }
+
+  .profileInside > main > nav > ul > li > a {
+    font-size: 15px;
+  }
+  .profileInside > nav > section {
+    margin-left: 50px;
+  }
+  #lastBooks > ul {
+    margin: 0px 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .book {
+    width: 150px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .price {
+    bottom: -20px;
+    right: 15px;
+  }
+  #lastBooks > h3 {
+    margin: 20px;
+  }
+  .seeker {
+    margin: 0 0px 0;
+  }
+  .textSeek > :last-child {
+    font-size: 2vh;
+  }
+
+  .textSeek > :first-child {
+    width: 80px;
+  }
+  .headerPrincipal > h1 {
+    font-size: 8vh;
+  }
+  .formProfile {
+    margin: 10px;
+  }
+  .formBook {
+    margin: 0 20px;
+  }
+  .formBook > form > div:first-child,
+  .formBook > form > div:nth-child(2) {
+    margin-left: 20px;
+  }
+  .forms {
+    padding: 20px;
+  }
+  .changePassword {
+    margin: 10px 30px;
+  }
+  .btnPurchase {
+    display: flex;
+    flex-direction: column;
+  }
+  .viewBook img {
+    width: 20vh;
+  }
+  .viewBook {
+    margin: 30px;
+  }
+  #categories > nav > ul {
+    margin: 10px 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "española idiomas"
+      "extranjera academicos"
+      "infantil juvenil"
+      "comic hobbies";
+  }
+  #categories > nav > ul > li {
+    width: 130px;
+  }
+  h2 {
+    margin: 0px 10px;
+  }
+  #categories a {
+    font-size: 15px;
+  }
+  .listBooksUser {
+    margin: 10px 10px;
+  }
+  .login,
+  .register {
+    width: 300px;
+  }
+  .login > button,
+  .register > button {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .err {
+    margin-top: 300px;
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .err {
+    margin-top: 300px;
+    margin-left: 100px;
+    width: 60vw;
+  }
+  #btnErr {
+    margin-left: 200px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .err {
+    margin-top: 300px;
+    margin-left: 100px;
+    width: 60vw;
+  }
+  #btnErr {
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+  .err > p {
+    margin-top: 20px;
+    font-size: 20px;
   }
 }

@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { port } from "./Principal";
+import { port } from "../App";
 import { List } from "./List-Avatar";
-import { useFetchData } from "./useFetch/useFetchData";
-import "../css/profileOutSide.css";
+import { useFetchData } from "../hooks/useFetchData";
 
 const ProfileOutSide = () => {
   let { idUser, id, idBook, name } = useParams();

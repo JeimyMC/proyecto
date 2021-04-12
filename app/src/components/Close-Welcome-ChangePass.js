@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import "../css/close-welcome-changepass.css";
+
 const Close = () => {
   const history = useHistory();
   const handlClick = () => {
@@ -47,28 +47,4 @@ const Welcome = () => {
   );
 };
 
-const ViewCorrectChangePass = () => {
-  return (
-    <section style={{ padding: 318 }} className="fondo">
-      <section className="welcome">
-        <p>Se ha cambiado correctamente, vuelve a tu:</p>
-        <Link style={{ fontSize: 25 }} to="/principal/profile">
-          Perfil
-        </Link>
-      </section>
-    </section>
-  );
-};
-
-const ViewSendNewPass = () => {
-  return (
-    <section style={{ padding: 318 }} className="fondo">
-      <section className="welcome">
-        <p>Se ha enviado un mensaje a tu correo.</p>
-        <Link to="/principal">Principal</Link>
-      </section>
-    </section>
-  );
-};
-
-export { Close, ViewClose, Welcome, ViewCorrectChangePass, ViewSendNewPass };
+export { Close, ViewClose, Welcome };

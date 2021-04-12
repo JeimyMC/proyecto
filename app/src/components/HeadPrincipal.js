@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import "../css/headPrincipal.css";
 
 const HeadPrincipal = () => {
   const [inputValue, setInputValue] = useState("");

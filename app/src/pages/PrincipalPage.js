@@ -1,10 +1,8 @@
 import React from "react";
-
-import { HeadPrincipal } from "./HeadPrincipal";
-import { Categories } from "./Categories";
-import { LastBooks } from "./LastBooks";
-import { NavPrincipal } from "./NavPrincipal";
-import "../css/navPrincipal.css";
+import { HeadPrincipal } from "../components/HeadPrincipal";
+import { Categories } from "../components/Categories";
+import { LastBooks } from "../components/LastBooks";
+import { NavPrincipal } from "../components/NavPrincipal";
 
 const PrincipalPage = ({ auth, setAuth }) => {
   return (

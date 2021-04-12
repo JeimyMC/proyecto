@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { port } from "./Principal";
+import { port } from "../App";
 
 const Avatar = ({ e, to }) => {
   const url = `http://localhost:${port}/uploads/${e.photoFront}`;

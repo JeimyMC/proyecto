@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { useFetchData } from "./useFetch/useFetchData";
-import { port } from "./Principal";
+import { useFetchData } from "../hooks/useFetchData";
+import { port } from "../App";
 import { BookOfKindCategory } from "./BookOfKindCategory";
-import "../css/categories.css";
 
 const Categories = () => {
   const [data] = useFetchData(`http://localhost:${port}/beginning/categories`);

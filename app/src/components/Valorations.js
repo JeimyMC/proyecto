@@ -1,9 +1,8 @@
 import React from "react";
-import { useFetchData } from "./useFetch/useFetchData";
-import { useFetchAuth } from "./useFetch/useFetchAuth";
-import { port } from "./Principal";
+import { useFetchData } from "../hooks/useFetchData";
+import { useFetchAuth } from "../hooks/useFetchAuth";
+import { port } from "../App";
 import { Link, useParams } from "react-router-dom";
-import "../css/valorations.css";
 
 const ValorationsOutside = () => {
   const { idUser } = useParams();
@@ -46,17 +45,7 @@ const SoldBooks = ({ book }) => {
       </li>
     );
   });
-  return (
-    <section className="viewValoration">
-      <p>Valoraciones</p>
-      <nav>
-        <Link to="/principal">Principal ˃ </Link>
-
-        <p>Valoraciones</p>
-      </nav>
-      <ul>{list}</ul>
-    </section>
-  );
+  return <ul>{list}</ul>;
 };
 
 export { SoldBooks, ValorationsOutside, ValorationsInside };

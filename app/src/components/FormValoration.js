@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { port } from "./Principal";
+import { port } from "../App";
 import { useHistory } from "react-router-dom";
-import "../css/formValoration.css";
 
 const FormValoration = ({ idBook, auth }) => {
   const history = useHistory();

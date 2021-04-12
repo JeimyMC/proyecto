@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { port } from "./Principal";
-import { Link, useParams } from "react-router-dom";
-import { useFetchAuth } from "./useFetch/useFetchAuth";
+import { port } from "../App";
+import { useParams } from "react-router-dom";
+import { useFetchAuth } from "../hooks/useFetchAuth";
 import { List } from "./List-Avatar";
-import "../css/listBooksUser.css";
 
 const ListBooksUser = ({ auth }) => {
   const { kind } = useParams();
@@ -16,18 +15,6 @@ const ListBooksUser = ({ auth }) => {
 
   const linkOfListBookUser = (productId) =>
     `/principal/profile/list/${kind}/book/${productId}`;
-  let name;
-  if (kind === "offers") {
-    name = "Notificaciones";
-  } else if (kind === "favorites") {
-    name = "Favoritos";
-  } else if (kind === "reserved") {
-    name = "Reservados";
-  } else if (kind === "purchase") {
-    name = "Comprados";
-  } else if (kind === "toSell") {
-    name = "En venta";
-  }
 
   const handlClick = async () => {
     const num2Sume = num2 + 3;
@@ -51,19 +38,11 @@ const ListBooksUser = ({ auth }) => {
     setNum2(num2Sume);
   };
   return (
-    <section className="listBooksUser">
-      <p>{name}</p>
-      <nav>
-        <Link to="/principal">Principal ˃ </Link>
-        <Link to="/principal/profile">Perfil ˃ </Link>
-        <p>{name}</p>
-      </nav>
-      <section>
-        <List array={dataList} link={linkOfListBookUser}></List>
-        {dataList.length < 3 ? null : (
-          <button onClick={handlClick}>Ver más</button>
-        )}
-      </section>
+    <section>
+      <List array={dataList} link={linkOfListBookUser}></List>
+      {dataList.length < 3 ? null : (
+        <button onClick={handlClick}>Ver más</button>
+      )}
     </section>
   );
 };

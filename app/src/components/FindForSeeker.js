@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { List } from "./List-Avatar";
-import { port } from "./Principal";
+import { port } from "../App";
 
 const FindForSeeker = () => {
   const { seek, data } = useParams();
@@ -29,33 +29,16 @@ const FindForSeeker = () => {
     };
     fetcher();
   }, [url, seek, data]);
-  let name;
-  if (seek === "title") {
-    name = "Titulo";
-  } else if (seek === "author") {
-    name = "Autor";
-  } else if (seek === "city") {
-    name = "Ciudad";
-  } else if (seek === "cp") {
-    name = "Código postal";
-  }
 
-  return (
-    <div className="listBooksUser">
-      <p>Buscador</p>
-      <Link to="/principal">Principal ˃ </Link>
-      <p>
-        Has buscado por "{name}" con "{data}"
-      </p>
-      {list.length > 0 ? (
-        <section>
-          <List array={list} link={link}></List>
-        </section>
-      ) : (
-        <p>No hay libros</p>
-      )}
-    </div>
-  );
+  const bookSeeker =
+    list.length > 0 ? (
+      <section>
+        <List array={list} link={link}></List>
+      </section>
+    ) : (
+      <p>No hay libros</p>
+    );
+  return bookSeeker;
 };
 
 export { FindForSeeker };
