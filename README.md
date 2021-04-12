@@ -1,6 +1,6 @@
 # RecyBook
 
-##¡Bienvenido a Recybook, una aplicación para la venta de libros se segunda mano!
+## ¡Bienvenido a Recybook, una aplicación para la venta de libros se segunda mano!
 
 Puedes buscar los libros publicados por:
 
@@ -11,7 +11,7 @@ Autor
 Ciudad
 ```
 
-Los libros están distribuidos por 8 categorías:
+### Categorías
 
 ```
 Idiomas
